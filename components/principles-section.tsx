@@ -14,40 +14,13 @@ export function PrinciplesSection() {
 
   const principles = [
     {
-      number: "01",
-      titleParts: [
-        { text: "INTERFACE", highlight: true },
-        { text: " MINIMALISM", highlight: false },
-      ],
-      description: "Reduce until only the essential remains. Every element earns its place.",
-      align: "left",
-    },
-    {
-      number: "02",
-      titleParts: [
-        { text: "SYSTEMS", highlight: true },
-        { text: " OVER SCREENS", highlight: false },
-      ],
-      description: "Design behaviors, not just layouts. Build logic that scales.",
-      align: "right",
-    },
-    {
       number: "03",
       titleParts: [
-        { text: "CONTROLLED ", highlight: false },
-        { text: "TENSION", highlight: true },
+        { text: "ABOUT", highlight: true },
+        { text: " ME", highlight: false },
       ],
-      description: "Balance between restraint and expression. Confidence without excess.",
+      description: "I’m driven by curiosity for combinatorics and how simple ideas scale into complex systems. I love reading, building projects, and collaborating with others. Currently seeking Summer 2026 internships and open to working on interesting problems together.",
       align: "left",
-    },
-    {
-      number: "04",
-      titleParts: [
-        { text: "SIGNAL ", highlight: false },
-        { text: "CLARITY", highlight: true },
-      ],
-      description: "Communication that cuts through noise. Precision in every interaction.",
-      align: "right",
     },
   ]
 
@@ -91,12 +64,6 @@ export function PrinciplesSection() {
 
   return (
     <section ref={sectionRef} id="principles" className="relative py-32 pl-6 md:pl-28 pr-6 md:pr-12">
-      {/* Section header */}
-      <div ref={headerRef} className="mb-24">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03 / Principles</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">HOW WE WORK</h2>
-      </div>
-
       {/* Staggered principles */}
       <div ref={principlesRef} className="space-y-24 md:space-y-32">
         {principles.map((principle, index) => (
@@ -107,7 +74,7 @@ export function PrinciplesSection() {
             }`}
           >
             {/* Annotation label */}
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent mb-4">
               {principle.number} / {principle.titleParts[0].text.split(" ")[0]}
             </span>
 

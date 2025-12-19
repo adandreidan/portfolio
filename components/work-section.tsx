@@ -9,40 +9,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
   {
-    title: "Project Lattice",
-    medium: "Interface Study",
-    description: "Structural framework for adaptive layouts in dynamic content systems.",
+    title: "Men's Health Tracker",
+    medium: "Software Development",
+    description: "A men's health analytics tracker built with XCode, TypeScript, and Python, comparing prostate health to data of similar age men.",
     span: "col-span-2 row-span-2",
+    url: "https://github.com/adandreidan/mens-health-tracker",
   },
   {
-    title: "Signal Field",
-    medium: "Agent Orchestration",
-    description: "Autonomous coordination layer for multi-agent environments.",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    title: "Silent Agent",
-    medium: "Visual System",
-    description: "Non-intrusive interface patterns for ambient computing.",
-    span: "col-span-1 row-span-2",
-  },
-  {
-    title: "Noir Grid",
-    medium: "Typography",
-    description: "High-contrast typographic system for editorial interfaces.",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    title: "Echo Chamber",
-    medium: "Audio-Visual",
-    description: "Generative soundscapes mapped to interface interactions.",
+    title: "Software Engineer Intern",
+    medium: "Doxim ⋅ May-June 2025",
+    description: "PDF-to-CSV data extraction pipelines with Python and Pandas.",
     span: "col-span-2 row-span-1",
+    url: "https://www.doxim.com",
   },
   {
-    title: "Void Protocol",
-    medium: "Experimental",
-    description: "Negative space as primary interaction medium.",
-    span: "col-span-1 row-span-1",
+    title: "Portfolio Website",
+    medium: "Web Development",
+    description: "A modern, responsive portfolio website built with HTML, CSS, and JavaScript.",
+    span: "col-span-2 row-span-1",
+    url: "https://www.andreidan.ca",
   },
 ]
 
@@ -98,12 +83,9 @@ export function WorkSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-16 flex items-end justify-between">
         <div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Experiments</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / RECENT WORK</span>
           <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
         </div>
-        <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
-          Studies across interface design, agent systems, and visual computation.
-        </p>
       </div>
 
       {/* Asymmetric grid */}
@@ -129,6 +111,7 @@ function WorkCard({
     medium: string
     description: string
     span: string
+    url?: string
   }
   index: number
   persistHover?: boolean
@@ -183,7 +166,18 @@ function WorkCard({
             isActive ? "text-accent" : "text-foreground",
           )}
         >
-          {experiment.title}
+          {experiment.url ? (
+            <a
+              href={experiment.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {experiment.title}
+            </a>
+          ) : (
+            experiment.title
+          )}
         </h3>
       </div>
 

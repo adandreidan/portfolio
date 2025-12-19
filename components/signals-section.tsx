@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -9,29 +9,34 @@ gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
   {
-    date: "2025.06.10",
-    title: "Signal Field",
-    note: "New interface paradigm for ambient computing environments.",
-  },
-  {
-    date: "2025.05.28",
-    title: "Silent Agent",
-    note: "Orchestration layer for autonomous design systems.",
+    date: "2025.06.01",
+    title: "Software Engineer Intern",
+    note: "Completed internship at Doxim working on PDF-to-CSV data extraction pipelines.",
+    url: "https://www.doxim.com",
   },
   {
     date: "2025.05.15",
-    title: "Noir Grid",
-    note: "Typographic system for editorial interfaces.",
+    title: "AI & ML Certification",
+    note: "Completed comprehensive AI and ML with Python certification from Circuit Stream.",
+    url: "https://www.credly.com/badges/93218a0e-7eb3-4ebf-b049-c9da49674ca0/public_url",
   },
   {
     date: "2025.04.30",
-    title: "Project Lattice",
-    note: "Structural framework for adaptive layouts.",
+    title: "Men's Health Tracker",
+    note: "Launched men's health analytics application with XCode, TypeScript, and Python.",
+    url: "https://github.com/adandreidan/mens-health-tracker",
   },
   {
     date: "2025.04.12",
-    title: "Echo Chamber",
-    note: "Audio-visual synthesis in browser environments.",
+    title: "AP Java Certification",
+    note: "Earned AP Java Computer Science Principles certification through CodeHS.",
+    url: "https://codehs.com/certificate/kWh0Qf",
+  },
+  {
+    date: "2025.01.01",
+    title: "Portfolio Website",
+    note: "Developed and launched modern responsive portfolio website.",
+    url: "https://www.andreidan.ca",
   },
 ]
 
@@ -40,41 +45,6 @@ export function SignalsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
-  const cursorRef = useRef<HTMLDivElement>(null)
-  const [isHovering, setIsHovering] = useState(false)
-
-  useEffect(() => {
-    if (!sectionRef.current || !cursorRef.current) return
-
-    const section = sectionRef.current
-    const cursor = cursorRef.current
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = section.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
-
-      gsap.to(cursor, {
-        x: x,
-        y: y,
-        duration: 0.5,
-        ease: "power3.out",
-      })
-    }
-
-    const handleMouseEnter = () => setIsHovering(true)
-    const handleMouseLeave = () => setIsHovering(false)
-
-    section.addEventListener("mousemove", handleMouseMove)
-    section.addEventListener("mouseenter", handleMouseEnter)
-    section.addEventListener("mouseleave", handleMouseLeave)
-
-    return () => {
-      section.removeEventListener("mousemove", handleMouseMove)
-      section.removeEventListener("mouseenter", handleMouseEnter)
-      section.removeEventListener("mouseleave", handleMouseLeave)
-    }
-  }, [])
 
   useEffect(() => {
     if (!sectionRef.current || !headerRef.current || !cardsRef.current) return
@@ -123,19 +93,9 @@ export function SignalsSection() {
 
   return (
     <section id="signals" ref={sectionRef} className="relative py-32 pl-6 md:pl-28">
-      <div
-        ref={cursorRef}
-        className={cn(
-          "pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-50",
-          "w-12 h-12 rounded-full border-2 border-accent bg-accent",
-          "transition-opacity duration-300",
-          isHovering ? "opacity-100" : "opacity-0",
-        )}
-      />
-
       {/* Section header */}
       <div ref={headerRef} className="mb-16 pr-6 md:pr-12">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Signals</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / RECENTS</span>
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">WHAT&apos;S NEW</h2>
       </div>
 
@@ -160,7 +120,7 @@ function SignalCard({
   signal,
   index,
 }: {
-  signal: { date: string; title: string; note: string }
+  signal: { date: string; title: string; note: string; url?: string }
   index: number
 }) {
   return (
@@ -186,7 +146,18 @@ function SignalCard({
 
         {/* Title */}
         <h3 className="font-[var(--font-bebas)] text-4xl tracking-tight mb-4 group-hover:text-accent transition-colors duration-300">
-          {signal.title}
+          {signal.url ? (
+            <a
+              href={signal.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {signal.title}
+            </a>
+          ) : (
+            signal.title
+          )}
         </h3>
 
         {/* Divider line */}
