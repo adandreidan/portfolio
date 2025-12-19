@@ -1,30 +1,33 @@
-# INTERFACE
+Andrei Dan — Personal Portfolio Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+This repository contains the source code for my personal portfolio website:
+👉 https://www.andreidan.ca
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/adandreidans-projects/v0-interface)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/eUKKpbkPXlc)
+The site is designed to showcase my background in computer science, software engineering projects, leadership, and communication, while keeping the design clean, fast, and accessible.
 
-## Overview
+✨ About the Website
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+My portfolio highlights:
+	•	Technical projects (software, data, and full-stack work)
+	•	Leadership and communication experience (debate, teamwork, athletics)
+	•	A concise overview of my interests at the intersection of technology, finance, and product thinking
+	•	Easy access to my resume, GitHub, LinkedIn, and contact information
 
-## Deployment
+# Portfolio Interface
 
-Your project is live at:
+A modern, experimental portfolio built with Next.js, TypeScript, and Tailwind CSS, inspired by interface-driven design systems and motion-focused UI.  
 
-**[https://vercel.com/adandreidans-projects/v0-interface](https://vercel.com/adandreidans-projects/v0-interface)**
+Designed to showcase selected work, experiments, and personal principles through a clean, minimal aesthetic.
 
-## Build your app
+Features
 
-Continue building your app on:
+- Experimental, grid-based layout
+- Animated text and section transitions
+- Modular component architecture
+- Data-driven sections for easy customization
+- Dark UI with accent-based visual hierarchy
 
-**[https://v0.app/chat/eUKKpbkPXlc](https://v0.app/chat/eUKKpbkPXlc)**
+📊 Analytics
 
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+The site uses Vercel Web Analytics to track page views and visitor interactions in a privacy-friendly way.
+Analytics are integrated using a lightweight script and require no cookies or third-party trackers.
