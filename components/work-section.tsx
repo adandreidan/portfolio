@@ -18,7 +18,7 @@ const experiments = [
   {
     title: "Software Engineer Intern",
     medium: "Doxim ⋅ May-June 2025",
-    description: "PDF-to-CSV data extraction pipelines with Python and Pandas.",
+    description: "PDF data extraction pipelines with Python and Pandas.",
     span: "col-span-2 row-span-1",
     url: "https://www.doxim.com",
   },
