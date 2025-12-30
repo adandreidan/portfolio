@@ -9,31 +9,43 @@ gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
   {
-    date: "2025.06.01",
+    date: "2025.12.27",
+    title: "Advanced Pandas Certification",
+    note: "Advanced Pandas Certification - Mastering Pandas, Jupyter Notebook, Data Sorting, and Essential Python Libraries & APIs.",
+    url: "https://www.linkedin.com/learning/certificates/94db261214a87da6ebaec015b1d986f6bf8f2ddec1f59bb2310dbc8726d5d3be?trk=share_certificate",
+  },
+  {
+    date: "2025.12.23",
+    title: "Python OOP Certification",
+    note: "Python OOP Certification - Covering Classes, Inheritance, Advanced Functions, and Magic Methods for Python Object-Oriented Programming.",
+    url: "https://www.linkedin.com/learning/certificates/d4130a43b91ed8a3a4f1926d1df3b50322624ea2ba5aa208df68f1f1350484c6?trk=share_certificate",
+  },
+  {
+    date: "2025.05-06",
     title: "Software Engineer Intern",
     note: "Completed internship at Doxim working on PDF-to-CSV data extraction pipelines.",
     url: "https://www.doxim.com",
   },
   {
-    date: "2025.05.15",
+    date: "2024.07.15",
     title: "AI & ML Certification",
     note: "Completed comprehensive AI and ML with Python certification from Circuit Stream.",
     url: "https://www.credly.com/badges/93218a0e-7eb3-4ebf-b049-c9da49674ca0/public_url",
   },
   {
-    date: "2025.04.30",
+    date: "2025.11.23",
     title: "Men's Health Tracker",
     note: "Launched men's health analytics application with XCode, TypeScript, and Python.",
     url: "https://github.com/adandreidan/mens-health-tracker",
   },
   {
-    date: "2025.04.12",
+    date: "2024.06.20",
     title: "AP Java Certification",
     note: "Earned AP Java Computer Science Principles certification through CodeHS.",
     url: "https://codehs.com/certificate/kWh0Qf",
   },
   {
-    date: "2025.01.01",
+    date: "2025.08.12",
     title: "Portfolio Website",
     note: "Developed and launched modern responsive portfolio website.",
     url: "https://www.andreidan.ca",

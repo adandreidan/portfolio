@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "Computer Science student at the University of Waterloo focused on AI and software engineering.",
   generator: "Andrei Dan",
   icons: {
+    
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico" },
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 }
+
 
 export default function RootLayout({
   children,
