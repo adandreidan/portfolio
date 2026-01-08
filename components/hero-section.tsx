@@ -1,10 +1,8 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ScrambleTextOnHover } from "@/components/scramble-text"
-import { SplitFlapText, SplitFlapMuteToggle, SplitFlapAudioProvider } from "@/components/split-flap-text"
+import { SplitFlapText } from "@/components/split-flap-text"
 import { AnimatedNoise } from "@/components/animated-noise"
-import { BitmapChevron } from "@/components/bitmap-chevron"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -34,31 +32,19 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hero" className="relative min-h-screen flex items-center pl-6 md:pl-28 pr-6 md:pr-12">
+    <section ref={sectionRef} id="hero" className="relative min-h-screen flex items-center pl-6 md:pl-28 pr-6 md:pr-12 pt-20 md:pt-24">
       <AnimatedNoise opacity={0.03} />
-
-      {/* Left vertical labels */}
-      <div className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground -rotate-90 origin-left block whitespace-nowrap">
-          SIGNAL
-        </span>
-      </div>
 
       {/* Main content */}
       <div ref={contentRef} className="flex-1">
-        <SplitFlapAudioProvider>
-          <div className="relative">
-            <SplitFlapText text="ANDREI DAN" speed={80} />
-            <div className="mt-4">
-              <SplitFlapMuteToggle />
-            </div>
-          </div>
-        </SplitFlapAudioProvider>
+        <div className="relative">
+          <SplitFlapText text="ANDREI DAN" speed={30} />
+        </div>
 
         <div className="flex items-start gap-6 lg:gap-8 mt-8">
           {/* Left side - Intro text */}
           <div className="flex-1 max-w-md">
-            <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] tracking-wide">
+            <h2 className="text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] tracking-wide">
               Computer Science Student @ <a href="https://cs.uwaterloo.ca" className="text-accent hover:text-accent/80 transition-colors">UWaterloo</a>
             </h2>
 
@@ -69,14 +55,13 @@ export function HeroSection() {
             <div className="mt-16 flex items-center gap-8">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
+                className="group inline-flex items-center border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
               >
-                <ScrambleTextOnHover text="View Projects" as="span" duration={0.6} />
-                <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
+                View Projects
               </a>
               <a
                 href="#signals"
-                className="font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="group inline-flex items-center border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
               >
                 What's News
               </a>

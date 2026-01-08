@@ -84,7 +84,7 @@ export function WorkSection() {
       <div ref={headerRef} className="mb-16 flex items-end justify-between">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / RECENT WORK</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
+          <h2 className="mt-4 text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
         </div>
       </div>
 
@@ -162,7 +162,7 @@ function WorkCard({
         </span>
         <h3
           className={cn(
-            "mt-3 font-[var(--font-bebas)] text-2xl md:text-4xl tracking-tight transition-colors duration-300",
+            "mt-3 text-2xl md:text-4xl tracking-tight transition-colors duration-300",
             isActive ? "text-accent" : "text-foreground",
           )}
         >
