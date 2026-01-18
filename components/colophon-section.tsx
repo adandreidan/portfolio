@@ -142,7 +142,7 @@ export function ColophonSection() {
         className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-          © 2025 Andrei Dan. All rights reserved.
+          © 2026 Andrei Dan | All rights reserved.
         </p>
         <p className="font-mono text-[10px] text-muted-foreground">Built with passion. Learning continuously.</p>
       </div>
