@@ -9,6 +9,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
   {
+    date: "2025.12 - Present",
+    title: "University of Waterloo CUBE - Software Developer",
+    note: "Developing a full-stack portfolio for Waterloo’s CUBE incubator startup projects",
+    url: "https://www.linkedin.com/company/uwcube/posts/?feedView=all",
+  },
+  {
     date: "2025.12.27",
     title: "Advanced Pandas Certification",
     note: "Advanced Pandas Certification - Mastering Pandas, Jupyter Notebook, Data Sorting, and Essential Python Libraries & APIs.",
