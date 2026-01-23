@@ -19,7 +19,7 @@ export function PrinciplesSection() {
         { text: "ABOUT", highlight: true },
         { text: " ME", highlight: false },
       ],
-      description: "I’m driven by curiosity for combinatorics and how simple ideas scale into complex systems. I love reading, building projects, and collaborating with others. Currently seeking Summer 2026 internships and open to working on interesting problems together.",
+      description: "I’m Andrei, a Computer Science student at the University of Waterloo. I’m currently working at the CUBE incubator, where I help build and improve full-stack web applications in a collaborative team environment. I’m passionate about learning and pushing my problem-solving skills, and the next area I’m excited to dive into is combinatorics. Outside of tech, I’ve been a competitive swimmer for over 10 years, and love playing basketball and football.",
       align: "left",
     },
   ]
