@@ -9,6 +9,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
   {
+    title: "UW CUBE Software Developer",
+    medium: "Full Stack Development",
+    description: "Designing a modern full stack incubator portfolio.",
+    span: "col-span-2 row-span-1",
+    url: "https://www.linkedin.com/company/uwcube/posts/",
+  },
+  {
     title: "Men's Health Tracker",
     medium: "Software Development",
     description: "A men's health analytics tracker built with XCode, TypeScript, and Python, comparing prostate health to data of similar age men.",
@@ -21,13 +28,6 @@ const experiments = [
     description: "PDF data extraction pipelines with Python and Pandas.",
     span: "col-span-2 row-span-1",
     url: "https://www.doxim.com",
-  },
-  {
-    title: "Portfolio Website",
-    medium: "Web Development",
-    description: "A modern, responsive portfolio website built with HTML, CSS, and JavaScript.",
-    span: "col-span-2 row-span-1",
-    url: "https://www.andreidan.ca",
   },
 ]
 
