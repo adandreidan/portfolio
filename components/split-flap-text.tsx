@@ -132,7 +132,7 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed }: Split
       transition={{ delay: tileDelay, duration: 0.3, ease: "easeOut" }}
       className="relative overflow-hidden flex items-center justify-center"
       style={{
-        fontSize: "clamp(4rem, 15vw, 14rem)",
+        fontSize: "clamp(2rem, 10vw, 10rem)",
         width: "0.65em",
         height: "1.05em",
         backgroundColor: bgColor,
