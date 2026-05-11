@@ -9,6 +9,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
   {
+    date: "2026.05 - Present",
+    title: "Corpay - Software Automation Engineer",
+    note: "Incoming S26",
+    url: "https://www.corpay.com/",
+  },
+  {
     date: "2025.12 - Present",
     title: "University of Waterloo CUBE - Software Developer",
     note: "Developing a full-stack portfolio for Waterloo’s CUBE incubator startup projects",

@@ -86,7 +86,7 @@ export function ColophonSection() {
         <div className="col-span-1">
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Location</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Waterloo, ON</li>
+            <li className="font-mono text-xs text-foreground/80">Toronto, ON</li>
             <li className="font-mono text-xs text-foreground/80">Canada</li>
           </ul>
         </div>
@@ -144,7 +144,6 @@ export function ColophonSection() {
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
           © 2026 Andrei Dan | All rights reserved.
         </p>
-        <p className="font-mono text-[10px] text-muted-foreground">Built with passion. Learning continuously.</p>
       </div>
     </section>
   )
