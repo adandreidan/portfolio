@@ -68,14 +68,16 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right side - Circular Photo positioned below DAN */}
-          <div className="flex-shrink-0 ml-8">
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-border/20 shadow-lg">
-              <img
-                src="/webpic.png"
-                alt="Andrei Dan"
-                className="w-full h-full object-cover"
-              />
+          {/* Right side - Photo positioned below DAN */}
+          <div className="flex-shrink-0 ml-8 flex items-center justify-center">
+            <div style={{ filter: "drop-shadow(0px 12px 2px rgba(48, 8, 100, 0.92))" }}>
+              <div className="w-72 md:w-80 overflow-hidden" style={{ borderRadius: "42% 58% 46% 54% / 38% 42% 58% 62%" }}>
+                <img
+                  src="/webpic.png"
+                  alt="Andrei Dan"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
