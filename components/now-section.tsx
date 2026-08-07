@@ -27,7 +27,7 @@ export function NowSection() {
   const ref = useReveal<HTMLDivElement>()
 
   return (
-    <section id="now" className="mx-auto max-w-3xl px-6 pt-20 pb-14 md:px-10 md:pt-24 md:pb-16">
+    <section id="now" className="mx-auto max-w-3xl px-6 pt-10 pb-14 md:px-10 md:pt-14 md:pb-16">
       <div ref={ref} className="reveal">
         <span className="kicker text-sm">Now</span>
         <h2 className="mt-2 text-2xl tracking-tight md:text-3xl">What&rsquo;s new</h2>
