@@ -12,13 +12,13 @@ const items = [
   {
     date: "2025.12 — Present",
     title: "UWaterloo CUBE — Software Developer",
-    note: "Building a full-stack portfolio site for Waterloo's CUBE incubator startups.",
+    note: "Backend systems, working on an NLP query engine.",
     url: "https://www.linkedin.com/company/uwcube/posts/?feedView=all",
   },
   {
     date: "2025.05 — 06",
     title: "Doxim — Software Engineer Intern",
-    note: "PDF-to-CSV data extraction pipelines.",
+    note: "Data extraction pipelines.",
     url: "https://www.doxim.com",
   },
 ]
