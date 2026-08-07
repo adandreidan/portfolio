@@ -24,8 +24,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local env files
+# Env files
+.env
 .env*.local
+
+# Claude Code local settings
+.claude/
 
 # el
 .el

@@ -1,218 +1,81 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
-import { cn } from "@/lib/utils"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useReveal } from "@/lib/use-reveal"
 
-gsap.registerPlugin(ScrollTrigger)
-
-const experiments = [
+const projects = [
   {
-    title: "UW CUBE Software Developer",
-    medium: "Full Stack Development",
-    description: "Designing a modern full stack incubator portfolio.",
-    span: "col-span-2 row-span-1",
-    url: "https://www.linkedin.com/company/uwcube/posts/",
+    title: "The Sidebar",
+    meta: "TypeScript · Next.js · MongoDB Atlas · Voyage",
+    description:
+      "A multi-agent deliberation engine that casts a panel of AI personas around a decision and drives them through argument, rebuttal, and synthesis into a single ruling.",
+    url: "https://github.com/Calvinky-Lee/Sidebar",
+  },
+  {
+    title: "Decentralized Identity Infrastructure",
+    meta: "ACA-Py · Docker · Node.js · PostgreSQL · DIDComm · AnonCreds",
+    description:
+      "A self-sovereign identity ecosystem where autonomous agents issue, hold, and verify credentials over encrypted DIDComm channels with zero-knowledge proofs and no central authority.",
+    url: "https://github.com/adandreidan/Decentralized-Identity-Infrastructure",
   },
   {
     title: "Men's Health Tracker",
-    medium: "Software Development",
-    description: "A men's health analytics tracker built with XCode, TypeScript, and Python, comparing prostate health to data of similar age men.",
-    span: "col-span-2 row-span-2",
+    meta: "Xcode · TypeScript · Python",
+    description:
+      "A men's health analytics tracker that benchmarks personal data against averages for men of similar age.",
     url: "https://github.com/adandreidan/mens-health-tracker",
-  },
-  {
-    title: "Software Engineer Intern",
-    medium: "Doxim ⋅ May-June 2025",
-    description: "PDF data extraction pipelines with Python and Pandas.",
-    span: "col-span-2 row-span-1",
-    url: "https://www.doxim.com",
   },
 ]
 
+const CERTIFICATIONS = [
+  { title: "Python OOP Certification", note: "LinkedIn Learning", date: "2025.12" },
+  { title: "Advanced Pandas Certification", note: "LinkedIn Learning", date: "2025.12" },
+  { title: "AI & ML Certification", note: "Circuit Stream", date: "2024.07" },
+  { title: "AP Computer Science Principles", note: "CodeHS", date: "2024.06" },
+]
+
 export function WorkSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const headerRef = useRef<HTMLDivElement>(null)
-  const gridRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!sectionRef.current || !headerRef.current || !gridRef.current) return
-
-    const ctx = gsap.context(() => {
-      // Header slide in from left
-      gsap.fromTo(
-        headerRef.current,
-        { x: -60, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: headerRef.current,
-            start: "top 90%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      )
-
-      const cards = gridRef.current?.querySelectorAll("article")
-      if (cards && cards.length > 0) {
-        gsap.set(cards, { y: 60, opacity: 0 })
-        gsap.to(cards, {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 90%",
-            toggleActions: "play none none reverse",
-          },
-        })
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  const ref = useReveal<HTMLDivElement>()
+  const certRef = useReveal<HTMLDivElement>()
 
   return (
-    <section ref={sectionRef} id="work" className="relative py-32 pl-6 md:pl-28 pr-6 md:pr-12">
-      {/* Section header */}
-      <div ref={headerRef} className="mb-16 flex items-end justify-between">
-        <div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / RECENT WORK</span>
-          <h2 className="mt-4 text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
+    <>
+      <section id="work" className="mx-auto max-w-3xl px-6 pt-14 pb-20 md:px-10 md:pt-16 md:pb-24">
+        <div ref={ref} className="reveal">
+          <span className="kicker text-sm">Work</span>
+          <h2 className="mt-2 text-2xl tracking-tight md:text-3xl">Selected work</h2>
+
+          <ul className="mt-10 divide-y divide-border">
+            {projects.map((project) => (
+              <li key={project.title} className="py-6 first:pt-0">
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="group block">
+                  <h3 className="text-[17px] leading-snug underline decoration-border decoration-1 underline-offset-4 transition-colors group-hover:decoration-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-2">{project.meta}</p>
+                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted">{project.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      </section>
 
-      {/* Asymmetric grid */}
-      <div
-        ref={gridRef}
-        className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[180px] md:auto-rows-[200px]"
-      >
-        {experiments.map((experiment, index) => (
-          <WorkCard key={index} experiment={experiment} index={index} persistHover={index === 0} />
-        ))}
-      </div>
-    </section>
-  )
-}
+      <section className="mx-auto max-w-3xl border-t border-border px-6 py-20 md:px-10 md:py-24">
+        <div ref={certRef} className="reveal">
+          <span className="kicker text-sm">Certifications</span>
+          <h2 className="mt-2 text-2xl tracking-tight md:text-3xl">Certifications</h2>
 
-function WorkCard({
-  experiment,
-  index,
-  persistHover = false,
-}: {
-  experiment: {
-    title: string
-    medium: string
-    description: string
-    span: string
-    url?: string
-  }
-  index: number
-  persistHover?: boolean
-}) {
-  const [isHovered, setIsHovered] = useState(false)
-  const cardRef = useRef<HTMLElement>(null)
-  const [isScrollActive, setIsScrollActive] = useState(false)
-
-  useEffect(() => {
-    if (!persistHover || !cardRef.current) return
-
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: cardRef.current,
-        start: "top 80%",
-        onEnter: () => setIsScrollActive(true),
-      })
-    }, cardRef)
-
-    return () => ctx.revert()
-  }, [persistHover])
-
-  const isActive = isHovered || isScrollActive
-
-  return (
-    <article
-      ref={cardRef}
-      className={cn(
-        "group relative border border-border/40 p-5 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
-        experiment.span,
-        isActive && "border-accent/60",
-      )}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Background layer */}
-      <div
-        className={cn(
-          "absolute inset-0 bg-accent/5 transition-opacity duration-500",
-          isActive ? "opacity-100" : "opacity-0",
-        )}
-      />
-
-      {/* Content */}
-      <div className="relative z-10">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          {experiment.medium}
-        </span>
-        <h3
-          className={cn(
-            "mt-3 text-2xl md:text-4xl tracking-tight transition-colors duration-300",
-            isActive ? "text-accent" : "text-foreground",
-          )}
-        >
-          {experiment.url ? (
-            <a
-              href={experiment.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              {experiment.title}
-            </a>
-          ) : (
-            experiment.title
-          )}
-        </h3>
-      </div>
-
-      {/* Description - reveals on hover */}
-      <div className="relative z-10">
-        <p
-          className={cn(
-            "font-mono text-xs text-muted-foreground leading-relaxed transition-all duration-500 max-w-[280px]",
-            isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
-          )}
-        >
-          {experiment.description}
-        </p>
-      </div>
-
-      {/* Index marker */}
-      <span
-        className={cn(
-          "absolute bottom-4 right-4 font-mono text-[10px] transition-colors duration-300",
-          isActive ? "text-accent" : "text-muted-foreground/40",
-        )}
-      >
-        {String(index + 1).padStart(2, "0")}
-      </span>
-
-      {/* Corner line */}
-      <div
-        className={cn(
-          "absolute top-0 right-0 w-12 h-12 transition-all duration-500",
-          isActive ? "opacity-100" : "opacity-0",
-        )}
-      >
-        <div className="absolute top-0 right-0 w-full h-[1px] bg-accent" />
-        <div className="absolute top-0 right-0 w-[1px] h-full bg-accent" />
-      </div>
-    </article>
+          <ul className="mt-10 space-y-3">
+            {CERTIFICATIONS.map((item) => (
+              <li key={item.title} className="flex flex-wrap items-baseline gap-x-3 text-[15px] text-foreground/85">
+                <time className="text-sm text-muted-2">{item.date}</time>
+                <span>{item.title}</span>
+                <span className="text-sm text-muted-2">— {item.note}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   )
 }
