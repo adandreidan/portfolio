@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { EB_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Nav } from "@/components/nav"
+import { Webring } from "@/components/webring"
 import "./globals.css"
 
 const garamond = EB_Garamond({
@@ -32,7 +33,10 @@ export default function RootLayout({
     <html lang="en" className={garamond.variable}>
       <body className="font-serif antialiased bg-background text-foreground">
         <Nav />
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <div className="flex-1">{children}</div>
+          <Webring />
+        </div>
         <Analytics />
       </body>
     </html>

@@ -27,7 +27,7 @@ export function Nav() {
         scrolled ? "shadow-[0_1px_0_var(--border)]" : ""
       }`}
     >
-      <div className="mx-auto max-w-3xl px-6 py-5 md:px-10">
+      <div className="mx-auto max-w-3xl px-6 py-4 md:px-10">
         <nav className="flex items-center gap-6 md:gap-8">
           {links.map((link) => {
             const isActive = pathname === link.href

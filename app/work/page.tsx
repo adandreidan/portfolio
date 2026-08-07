@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <main className="min-h-screen pt-16 md:pt-20 pb-24">
+    <main className="pt-16 md:pt-20 pb-24">
       <NowSection />
       <WorkSection />
     </main>

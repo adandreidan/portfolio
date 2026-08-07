@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-3xl px-6 pt-36 pb-20 md:px-10 md:pt-44 md:pb-24">
+    <section id="top" className="mx-auto max-w-3xl px-6 pt-20 pb-6 md:px-10 md:pt-24 md:pb-8">
       <div className="load-in">
         <h1 className="text-4xl tracking-tight md:text-5xl">Andrei Dan</h1>
         <a
@@ -12,23 +12,23 @@ export function Hero() {
           Computer Science, University of Waterloo
         </a>
 
-        <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-foreground/85">
+        <p className="mt-4 max-w-lg text-[17px] leading-relaxed text-foreground/85">
           I&rsquo;m building AI automation at Corpay, where I work on agents wired into the
           development cycle, and backend systems at UWaterloo CUBE, where I work on an NLP query
           engine.
         </p>
 
-        <p className="mt-4 max-w-lg text-[17px] leading-relaxed text-foreground/85">
+        <p className="mt-3 max-w-lg text-[17px] leading-relaxed text-foreground/85">
           I&rsquo;m interested in agents, retrieval, and the infrastructure that makes AI systems
           reliable enough to depend on. The field moves quickly and I like being close to the part
           of it that&rsquo;s still being figured out.
         </p>
 
-        <p className="mt-4 max-w-lg text-[17px] leading-relaxed text-foreground/85">
+        <p className="mt-3 max-w-lg text-[17px] leading-relaxed text-foreground/85">
           Outside of that I swim and play basketball.
         </p>
 
-        <div className="mt-6 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[15px]">
+        <div className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[15px]">
           <a
             href="mailto:adan@uwaterloo.ca"
             className="underline decoration-border decoration-1 underline-offset-4 transition-colors hover:text-muted hover:decoration-foreground"
