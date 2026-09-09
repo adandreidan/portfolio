@@ -5,8 +5,8 @@ import { useReveal } from "@/lib/use-reveal"
 const items = [
   {
     date: "2026.05 — Present",
-    title: "Corpay — Software Automation Engineer",
-    note: "Building internal automation tooling.",
+    title: "Corpay — QA Analyst",
+    note: "Building internal QA AI agents and automation tooling.",
     url: "https://www.corpay.com/",
   },
   {
