@@ -1,13 +1,4 @@
-// UWaterloo CS Webring badge. The prev/next links route through
-// cs.uwatering.com itself — it looks up this site's position in the
-// shared list live and redirects, so neighbors stay correct without
-// this site ever hardcoding who's next.
-//
-// TODO: "andrei-dan" is a placeholder slug. Swap it for the real one
-// once the webring PR (adding this site to their webringData[]) is
-// merged — confirm the exact slug by checking the entry on
-// cs.uwatering.com.
-const WEBRING_SLUG = "andrei-dan"
+const WEBRING_SLUG = "andreidan.ca"
 
 export function Webring() {
   return (
