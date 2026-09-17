@@ -13,9 +13,8 @@ export function Hero() {
         </a>
 
         <p className="mt-4 max-w-lg text-[17px] leading-relaxed text-foreground/85">
-          I&rsquo;m building AI automation at Corpay, where I work on agents wired into the
-          development cycle, and backend systems at UWaterloo CUBE, where I work on an NLP query
-          engine.
+          I&rsquo;m an incoming software engineer at Shopify. Previously I was a software
+          developer at Corpay, and I work with NLP at UWaterloo CUBE.
         </p>
 
         <p className="mt-3 max-w-lg text-[17px] leading-relaxed text-foreground/85">

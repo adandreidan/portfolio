@@ -4,8 +4,14 @@ import { useReveal } from "@/lib/use-reveal"
 
 const items = [
   {
-    date: "2026.05 — Present",
-    title: "Corpay — QA Analyst",
+    date: "2027.01",
+    title: "Shopify — Software Engineer Intern",
+    note: "Incoming W27",
+    url: "https://www.shopify.com/ro",
+  },
+  {
+    date: "2026.05 — 2026.08",
+    title: "Corpay — Software Developer Intern",
     note: "Building internal QA AI agents and automation tooling.",
     url: "https://www.corpay.com/",
   },
@@ -17,7 +23,7 @@ const items = [
   },
   {
     date: "2025.05 — 06",
-    title: "Doxim — Software Engineer Intern",
+    title: "Doxim — Software Engineer",
     note: "Data extraction pipelines.",
     url: "https://www.doxim.com",
   },
